@@ -1,0 +1,15 @@
+{
+  "fps": "30/1",
+  "frame_count": 120,
+  "shots": [{"id":"first","start":0,"end":60},{"id":"second","start":60,"end":120}],
+  "events": [
+    {"frame":0,"kind":"shot_start","mode":"replace"},
+    {"frame":10,"kind":"reveal","mode":"accumulate","target":"first-object"},
+    {"frame":20,"kind":"reveal","mode":"accumulate","target":"second-object"},
+    {"frame":45,"kind":"full_colour","mode":"replace"},
+    {"frame":60,"kind":"shot_start","mode":"replace"},
+    {"frame":75,"kind":"reveal","mode":"replace","target":"third-object"},
+    {"frame":100,"kind":"full_colour","mode":"replace"}
+  ],
+  "holds": [[0,10],[10,20],[20,45],[45,60],[60,75],[75,100],[100,120]]
+}

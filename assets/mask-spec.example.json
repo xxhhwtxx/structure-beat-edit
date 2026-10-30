@@ -1,0 +1,16 @@
+{
+  "description": "Illustrative geometry only; redraw for the actual working image.",
+  "background_gain": 0.55,
+  "layers": [
+    {"id":"entity","polygon":[[0.125,0.222],[0.875,0.222],[0.875,0.889],[0.125,0.889]],"holes":[[[0.313,0.5],[0.687,0.5],[0.687,0.889],[0.313,0.889]]],"cleanup":{"feather_px":0.6}},
+    {"id":"title","polygon":[[0.4,0.278],[0.6,0.278],[0.6,0.4],[0.4,0.4]],"hsv":{"hue_bands":[[0,12],[170,179]],"saturation":[100,255],"value":[70,255]},"intersect":["entity"],"cleanup":{"feather_px":0.6}},
+    {"id":"left","polygon":[[0.125,0.222],[0.5,0.222],[0.5,0.889],[0.125,0.889]],"intersect":["entity"],"cleanup":{"feather_px":0.6}},
+    {"id":"right","polygon":[[0.5,0.222],[0.875,0.222],[0.875,0.889],[0.5,0.889]],"intersect":["entity"],"cleanup":{"feather_px":0.6}}
+  ],
+  "states": [
+    {"id":"01-title","mode":"replace","layers":["title"]},
+    {"id":"02-left-added","mode":"accumulate","layers":["left"]},
+    {"id":"03-right-added","mode":"accumulate","layers":["right"]},
+    {"id":"04-right-only","mode":"replace","layers":["right"]}
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "结构卡点剪辑"
+  short_description: "从参考片拆解到实物遮罩、节拍编排、黑底重组和逐帧复核的完整流程"
+  default_prompt: "使用 $structure-beat-edit 分析参考视频，并根据我的素材完成结构卡点剪辑和逐帧检查。"
